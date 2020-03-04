@@ -34,7 +34,6 @@ class App extends Component {
       newBookInput: "",
       bookUnitsToAdd: 0
     };
-
   }
 
   componentDidMount() {
@@ -59,68 +58,60 @@ class App extends Component {
     });
   }
 
-  // Adding a new book to the database
-  handleFormSubmit = event => {
-    event.preventDefault();
-    console.log("Book has been added to database!");
-
-    // this.setState({
-    //   newBookInput: event.target.value
-    // });
-  };
   // Filling out blank form for new book
 
   // book title
-  updateTitle = (event) => {
+  updateTitle = event => {
     event.preventDefault();
     const userBookTitle = event.target.value;
 
     this.setState({
-      newBookTitle: userBookTitle,
-    })
+      newBookTitle: userBookTitle
+    });
   };
 
   // author
-  updateAuthor = (event) => {
+  updateAuthor = event => {
     event.preventDefault();
     const userAuthor = event.target.value;
 
     this.setState({
-      newAuthor: userAuthor,
-    })
+      newAuthor: userAuthor
+    });
   };
 
   // publisher
-  updatePublisher = (event) => {
+  updatePublisher = event => {
     event.preventDefault();
     const userPublisher = event.target.value;
 
     this.setState({
-      newPublisher: userPublisher,
-    })
+      newPublisher: userPublisher
+    });
   };
 
   // subject
-  updateSubject = (event) => {
+  updateSubject = event => {
     event.preventDefault();
     const userSubject = event.target.value;
 
     this.setState({
-      newSubject: userSubject,
-    })
+      newSubject: userSubject
+    });
   };
 
   // balance on hand
-  updateBalanceOnHand = (event) => {
+  updateBalanceOnHand = event => {
     event.preventDefault();
 
     const userBalanceOnHand = event.target.value;
     this.setState({
-      newBalanceOnHand: userBalanceOnHand,
-    })
+      newBalanceOnHand: userBalanceOnHand
+    });
   };
 
-  newBookSubmission = (event) => {
+  // Adding a new book to the database
+  newBookSubmission = event => {
     event.preventDefault();
     const formDb = firebase.database().ref();
 
@@ -129,21 +120,16 @@ class App extends Component {
         author: this.state.newAuthor,
         subject: this.state.newSubject,
         balanceOnHand: this.state.newBalanceOnHand,
-        publisher: this.state.newPublisher,
+        publisher: this.state.newPublisher
       }
-    })
+    });
   };
-
-
 
   // Updating the balance on hand for each book in the database (on at a time)
   updateInventory = (event, bookKey, currentBookBalance) => {
     event.preventDefault();
-    console.log("Inventory is being updated for each book!", bookKey);
-
     const bookDbRef = firebase.database().ref(`/${bookKey}`);
     const convertToNum = parseInt(currentBookBalance);
-    console.log(convertToNum);
 
     bookDbRef.update({
       balanceOnHand: convertToNum + this.state.bookUnitsToAdd
@@ -173,10 +159,7 @@ class App extends Component {
         <Main />
 
         {/* Blank form to submit new book information (name and key) to database */}
-        <form
-          className="newForm"
-          action="submit"
-        >
+        <form className="newForm" action="submit">
           <fieldset>
             <legend>Please fill in the information below</legend>
             <label htmlFor="updateTitle">Book title</label>

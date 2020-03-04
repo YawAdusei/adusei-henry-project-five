@@ -23,7 +23,8 @@ body {
 }
 
 header {
-  height: 50vh;
+  margin: 3% 0;
+  height: 25vh;
 }
 
 li {
@@ -36,7 +37,6 @@ li {
 ul {
   display: flex;
   flex-wrap: wrap;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   width: 20%;
@@ -56,7 +56,6 @@ h1 {
   font-size: 5vmax;
 }
 
-
 .newForm {
   margin: 0 auto;
   width: 65%;
@@ -66,7 +65,6 @@ h1 {
   text-align: center;
 
 }
-
 
 .App button {
   background-color: var(--secondaryDarkColour);
