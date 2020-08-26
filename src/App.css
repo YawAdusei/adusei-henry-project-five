@@ -16,15 +16,80 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
   --secondaryLightColour:#F5EAD9;
 }
 
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+div,
+section,
+img,
+header,
+footer,
+button,
+a {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
 
 body {
-  background-color: var(--primaryLightColour);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 header {
-  margin: 3% 0;
-  height: 25vh;
+  /* margin: 3% 0; */
+  height: 15vh;
+  color: black;
+  border: 1px solid black;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main {
+  background: url(./setupTests.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  height: 80vh;
+}
+
+/* Search and Results Styles */
+
+.searchArea {
+  /* color: white; */
+}
+
+.results, .bookListContent {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 20px auto;
+}
+
+.bookListContent {
+  background-color: #C0B8A7;
+  padding: 2%;
+}
+
+/* Book Card Component Styles */
+
+.book-description {
+  
+}
+
+.card-container {
+  padding: 5%;
 }
 
 li {
@@ -43,7 +108,6 @@ ul {
   margin: 0 auto;
   text-transform: uppercase;
   width: 90%;
-  
 }
 
 h1, h1, h3 {
@@ -54,6 +118,7 @@ h1, h1, h3 {
 
 h1 {
   font-size: 5vmax;
+  
 }
 
 .newForm {

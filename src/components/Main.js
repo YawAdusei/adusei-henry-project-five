@@ -6,8 +6,7 @@ class Main extends Component {
     return (
       <div>
         <h2>
-          Let's update our inventory of new books we just recieved in our
-          shipment today!{" "}
+          Let's search for books to read to get knowledge!{" "}
         </h2>
       </div>
     );

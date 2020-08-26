@@ -5,10 +5,15 @@ class Header extends Component {
     return (
       <div>
         <header>
-          <h1>Book Inventory Manager</h1>
+          <div className="top-bar">
+            <h1>WK</h1>
+            <a href="#booklist">
+              <i className="fas fa-book-reader"></i> Go to Bookshelf
+            </a>
+          </div>
         </header>
       </div>
-    )
+    );
   }
 }
 
