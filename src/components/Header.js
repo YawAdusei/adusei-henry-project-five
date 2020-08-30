@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookReader } from "@fortawesome/free-solid-svg-icons";
 
 
-const bookListIcon = <FontAwesomeIcon icon={faBookReader} size="5x" />;
+const bookListIcon = <FontAwesomeIcon icon={faBookReader} size="4x" />;
 
 
 class Header extends Component {
