@@ -20,8 +20,12 @@ body,
 h1,
 h2,
 h3,
+h4,
+h5,
+h6,
 p,
 ul,
+li,
 div,
 section,
 img,
@@ -40,85 +44,163 @@ html {
 
 body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  line-height: 1.4;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 5vmax;
+}
+
+h2 {
+  font-size: 3.5vmax;
+}
+
+h3 {
+  font-size: 1.5vmax;
+}
+
+h4 {
+  font-size: 1.1vmax;
 }
 
 header {
-  /* margin: 3% 0; */
-  height: 15vh;
   color: black;
-  border: 1px solid black;
 }
 
-.topBar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+li {
+  list-style-type: none;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.top-bar {
+  padding: 1%;
+}
+
+.top-bar a {
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  color: var(--primaryDarkColour);
+  transition: all 0.4s ease;
+}
+
+.top-bar a:hover, .top-bar a:focus {
+  color: var(--secondaryDarkColour)
 }
 
 .main {
-  background: url(./setupTests.jpg);
+  background-image: linear-gradient(rgba(245, 234, 217, 0.5), rgba(245, 234, 217, 0.5)), url('./setupTests.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   color: white;
   height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Search and Results Styles */
 
-.searchArea {
-  /* color: white; */
+.backToSearchLink {
+  font-size: 1.2vmax;
+  background-color: var(--primaryDarkColour);
+  color: var(--secondaryLightColour);
+  padding: 1%;
+  margin: 2% 0;
+  display: flex;
+  width: 15%;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid var(--primaryDarkColour);
+  border-radius: 5px;
+  transition: all 0.4s ease;
+  
 }
 
+.backToSearchLink:hover, .backToSearchLink:focus {
+    background-color: var(--secondaryLightColour);
+    color: var(--primaryDarkColour);
+  
+}
+
+input[type=text] {
+    width: 350px;
+    padding: 15px;
+    margin: 1% 0;
+    color: black;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+}
+
+input[type=submit] {
+    padding: 5px 15px;
+    margin: 1% auto;
+    text-align: center;
+    background-color: white;
+    color:black;
+    border: 1px solid grey;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type=submit]:hover {
+    background-color:var(--PrimaryDarkRed);
+    color: white;
+    border: 1px solid var(--PrimaryDarkRed);
+}
+
+
 .results, .bookListContent {
-  width: 90%;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   margin: 20px auto;
 }
 
 .bookListContent {
-  background-color: #C0B8A7;
-  padding: 2%;
+  background-image: linear-gradient(rgba(245, 234, 217, 0.8), rgba(245, 234, 217, 0.8)), url('./bookcase.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 /* Book Card Component Styles */
 
-.book-description {
-  
-}
-
-.card-container {
+.card-container, .bookListCardContainer {
+  margin: 3%;
   padding: 5%;
 }
 
-li {
-  list-style-type: none;
-  margin: 3%;
-  background-color: var(--primaryDarkColour);
-  color: var(--secondaryLightColour);
-}
-
-ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  width: 20%;
+.card-container img, .bookListCardContainer img {
+  width: 65%;
+  height: auto;
   margin: 0 auto;
-  text-transform: uppercase;
-  width: 90%;
+
+  box-shadow: 5px 5px 5px #8a8888;
 }
 
-h1, h1, h3 {
-  margin: 0;
-  padding: 0;
+.book-description {
+  margin: 5% 0;
 }
 
 
-h1 {
-  font-size: 5vmax;
-  
+.footer {
+  background-color: black;
+  color: white;
+  font-size: 1.2vmax;
+  padding: 1%;
 }
 
 .newForm {
@@ -128,21 +210,24 @@ h1 {
 
 .App {
   text-align: center;
-
 }
 
 .App button {
-  background-color: var(--secondaryDarkColour);
+  background-color: var(--primaryDarkColour);
   color: var(--secondaryLightColour);
-  /* border-radius: 90%; */
+  border-radius: 5px;
+  width: 40%;
   padding: 2%;
-  margin: 1% 0;
+  margin: 1%;
   border: none;
+  text-align: center;
+  transition: all 0.4s ease;
+  font-size: 1.1vmax;
 }
 
-.App button:hover, .App button:focus {
+.App button:hover, .App button:focus  {
   background-color: var(--secondaryLightColour);
-  color: var(--secondaryDarkColour);
+  color: var(--primaryDarkColour);
 }
 
 input {

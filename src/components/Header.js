@@ -1,4 +1,10 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBookReader } from "@fortawesome/free-solid-svg-icons";
+
+
+const bookListIcon = <FontAwesomeIcon icon={faBookReader} size="5x" />;
+
 
 class Header extends Component {
   render() {
@@ -6,9 +12,10 @@ class Header extends Component {
       <div>
         <header>
           <div className="top-bar">
-            <h1>WK</h1>
+            <h1>My Booklist App</h1>
+
             <a href="#booklist">
-              <i className="fas fa-book-reader"></i> Go to Bookshelf
+              {bookListIcon}
             </a>
           </div>
         </header>

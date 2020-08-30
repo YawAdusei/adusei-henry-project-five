@@ -4,6 +4,13 @@ import Header from './components/Header';
 import Books from './components/Books';
 import firebase from './firebase';
 
+// Items to complete for Book list app
+
+  // user can create multiple lists, and they can name their lists 
+  //  user cannot add a book to list if the book has already been added
+  // if there is no results, display message that says "sorry, no results."
+  // styling
+
 class App extends Component {
   constructor() {
     super();
@@ -15,8 +22,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
-        <Books />
+        <div className="wrapper">
+          <Header />
+        </div>
+          <Books />
       </div>
     );
   }

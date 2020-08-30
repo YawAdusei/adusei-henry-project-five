@@ -1,25 +1,25 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+
+const searchIcon = <FontAwesomeIcon icon={faSearch} size="2x" />;
 
 const SearchArea = (props) => {
         return (
             <div>
-                <div className="searchArea">
+                <div className="searchArea" id="search">
                     <form action="" 
                     onSubmit={props.searchBook}>
                         <input 
                         type="text" 
                         id="newBookTitle" 
                         name="search" 
+                        placeholder="search by title, author, or subject"
                         onChange={props.handleSearch} 
                         value={props.searchField}
                         required></input>
-                        <button type="submit" ref={props.myRef}>Search for books
+                        <button type="submit" ref={props.myRef}>{searchIcon}
                         </button>
-                        <select defaultValue="Sort" onChange={props.handleSort}>
-                            <option disabled value="Sort">Sort</option>
-                            <option value="Newest">Newest</option>
-                            <option value="Oldest">Oldest</option>
-                        </select>
                     </form>
                 </div>
             </div>
