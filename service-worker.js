@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/adusei-henry-project-five/precache-manifest.38c070f2a5d6db039a9d7bbd2cb3fcf9.js"
+  "/adusei-henry-project-five/precache-manifest.1488558d0a49b4b30233487160c113c4.js"
 );
 
 self.addEventListener('message', (event) => {
